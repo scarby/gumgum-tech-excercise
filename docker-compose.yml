@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cache:
+    environment:
+      - REDIS_URL=redis://h:pee719701b7c938bd31583004d0db9970d18693f1f572ebb12982c0a201df0e60@ec2-52-5-188-199.compute-1.amazonaws.com:10899
+    build: .
+    ports:
+     - "8000:8000"
+  redis:
+    image: "redis:alpine"
